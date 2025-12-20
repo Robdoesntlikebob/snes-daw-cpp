@@ -1,0 +1,20 @@
+﻿  main.cpp
+C:\Users\thech\SMPianoCPP\sndEMU\SPC_DSP.h(11,7): warning C4099: 'SPC_DSP': type name first seen using 'struct' now seen using 'class'
+  (compiling source file 'main.cpp')
+      C:\Users\thech\SMPianoCPP\sndEMU\SPC_DSP.h(11,7):
+      see declaration of 'SPC_DSP'
+  
+C:\Users\thech\SMPianoCPP\sndEMU\SPC_DSP.h(244,57): warning C4244: 'return': conversion from '__int64' to 'int', possible loss of data
+  (compiling source file 'main.cpp')
+  
+C:\Users\thech\SMPianoCPP\main.cpp(50,8): warning C4200: nonstandard extension used: zero-sized array in struct/union
+      C:\Users\thech\SMPianoCPP\main.cpp(50,8):
+      This member will be ignored by a defaulted constructor or copy/move assignment operator
+  
+C:\Users\thech\SMPianoCPP\main.cpp(61,29): warning C4244: '=': conversion from 'short' to 'u8', possible loss of data
+C:\Users\thech\SMPianoCPP\main.cpp(65,30): warning C4333: '>>': right shift by too large amount, data loss
+C:\Users\thech\SMPianoCPP\main.cpp(71,14): warning C4305: '+=': truncation from 'int' to 'u8'
+C:\Users\thech\SMPianoCPP\main.cpp(74,6): warning C4326: return type of 'main' should be 'int' instead of 'void'
+C:\Users\thech\SMPianoCPP\main.cpp(80,25): warning C4244: 'argument': conversion from '__int64' to 'int', possible loss of data
+C:\Users\thech\SMPianoCPP\main.cpp(81,23): warning C4244: 'argument': conversion from '__int64' to 'int', possible loss of data
+  SMPiano.vcxproj -> C:\Users\thech\SMPianoCPP\x64\Debug\SMPiano.exe
