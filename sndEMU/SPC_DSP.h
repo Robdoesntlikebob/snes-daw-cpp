@@ -65,9 +65,6 @@ public:
 	// Returns non-zero if new key-on events occurred since last call
 	bool check_kon();
 	
-	//thx furnace m8 lol
-	void setupInterpolation(bool interpolate);
-
 // DSP register addresses
 
 	// Global registers
@@ -121,10 +118,8 @@ public:
 		int env;                // current envelope level
 		int hidden_env;         // used by GAIN mode 7, very obscure quirk
 		uint8_t t_envx_out;
-		bool interpolate;       // Furnace addition, to disable interpolation
 	};
-
-public:
+private:
 	enum { brr_block_size = 9 };
 	
 	struct state_t
@@ -179,7 +174,6 @@ public:
 		int t_main_out [2];
 		int t_echo_out [2];
 		int t_echo_in  [2];
-		
 		
 		voice_t voices [voice_count];
 		

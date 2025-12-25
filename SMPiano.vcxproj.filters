@@ -16,6 +16,12 @@
     <Filter Include="Source Files\sndEMU">
       <UniqueIdentifier>{de31c0ee-c0e0-4733-a8bd-5db66e3c67fc}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\SDL3">
+      <UniqueIdentifier>{5c96c298-4a04-40cd-953a-eddda622c958}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\lua">
+      <UniqueIdentifier>{8ffadd7c-f7a9-48fe-b154-75d12f731bb2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -40,9 +46,6 @@
       <Filter>Source Files\sndEMU</Filter>
     </ClCompile>
     <ClCompile Include="sndEMU\SPC_Filter.cpp">
-      <Filter>Source Files\sndEMU</Filter>
-    </ClCompile>
-    <ClCompile Include="sndEMU\brrcodec.cpp">
       <Filter>Source Files\sndEMU</Filter>
     </ClCompile>
   </ItemGroup>
@@ -77,11 +80,488 @@
     <ClInclude Include="sndEMU\SPC_Filter.h">
       <Filter>Source Files\sndEMU</Filter>
     </ClInclude>
-    <ClInclude Include="sndEMU\brrcodec.h">
-      <Filter>Source Files\sndEMU</Filter>
-    </ClInclude>
     <ClInclude Include="stdc++.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL3\SDL.h">
+      <Filter>Source Files\SDL3</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL3\SDL_assert.h">
+      <Filter>Source Files\SDL3</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL3\SDL_asyncio.h">
+      <Filter>Source Files\SDL3</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL3\SDL_atomic.h">
+      <Filter>Source Files\SDL3</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL3\SDL_audio.h">
+      <Filter>Source Files\SDL3</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL3\SDL_begin_code.h">
+      <Filter>Source Files\SDL3</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL3\SDL_bits.h">
+      <Filter>Source Files\SDL3</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL3\SDL_blendmode.h">
+      <Filter>Source Files\SDL3</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL3\SDL_camera.h">
+      <Filter>Source Files\SDL3</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL3\SDL_clipboard.h">
+      <Filter>Source Files\SDL3</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL3\SDL_close_code.h">
+      <Filter>Source Files\SDL3</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL3\SDL_copying.h">
+      <Filter>Source Files\SDL3</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL3\SDL_cpuinfo.h">
+      <Filter>Source Files\SDL3</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL3\SDL_dialog.h">
+      <Filter>Source Files\SDL3</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL3\SDL_egl.h">
+      <Filter>Source Files\SDL3</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL3\SDL_endian.h">
+      <Filter>Source Files\SDL3</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL3\SDL_error.h">
+      <Filter>Source Files\SDL3</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL3\SDL_events.h">
+      <Filter>Source Files\SDL3</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL3\SDL_filesystem.h">
+      <Filter>Source Files\SDL3</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL3\SDL_gamepad.h">
+      <Filter>Source Files\SDL3</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL3\SDL_gpu.h">
+      <Filter>Source Files\SDL3</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL3\SDL_guid.h">
+      <Filter>Source Files\SDL3</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL3\SDL_haptic.h">
+      <Filter>Source Files\SDL3</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL3\SDL_hidapi.h">
+      <Filter>Source Files\SDL3</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL3\SDL_hints.h">
+      <Filter>Source Files\SDL3</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL3\SDL_init.h">
+      <Filter>Source Files\SDL3</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL3\SDL_intrin.h">
+      <Filter>Source Files\SDL3</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL3\SDL_iostream.h">
+      <Filter>Source Files\SDL3</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL3\SDL_joystick.h">
+      <Filter>Source Files\SDL3</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL3\SDL_keyboard.h">
+      <Filter>Source Files\SDL3</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL3\SDL_keycode.h">
+      <Filter>Source Files\SDL3</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL3\SDL_loadso.h">
+      <Filter>Source Files\SDL3</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL3\SDL_locale.h">
+      <Filter>Source Files\SDL3</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL3\SDL_log.h">
+      <Filter>Source Files\SDL3</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL3\SDL_main.h">
+      <Filter>Source Files\SDL3</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL3\SDL_main_impl.h">
+      <Filter>Source Files\SDL3</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL3\SDL_messagebox.h">
+      <Filter>Source Files\SDL3</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL3\SDL_metal.h">
+      <Filter>Source Files\SDL3</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL3\SDL_misc.h">
+      <Filter>Source Files\SDL3</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL3\SDL_mouse.h">
+      <Filter>Source Files\SDL3</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL3\SDL_mutex.h">
+      <Filter>Source Files\SDL3</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL3\SDL_oldnames.h">
+      <Filter>Source Files\SDL3</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL3\SDL_opengl.h">
+      <Filter>Source Files\SDL3</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL3\SDL_opengl_glext.h">
+      <Filter>Source Files\SDL3</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL3\SDL_opengles.h">
+      <Filter>Source Files\SDL3</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL3\SDL_opengles2.h">
+      <Filter>Source Files\SDL3</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL3\SDL_opengles2_gl2.h">
+      <Filter>Source Files\SDL3</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL3\SDL_opengles2_gl2ext.h">
+      <Filter>Source Files\SDL3</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL3\SDL_opengles2_gl2platform.h">
+      <Filter>Source Files\SDL3</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL3\SDL_opengles2_khrplatform.h">
+      <Filter>Source Files\SDL3</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL3\SDL_pen.h">
+      <Filter>Source Files\SDL3</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL3\SDL_pixels.h">
+      <Filter>Source Files\SDL3</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL3\SDL_platform.h">
+      <Filter>Source Files\SDL3</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL3\SDL_platform_defines.h">
+      <Filter>Source Files\SDL3</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL3\SDL_power.h">
+      <Filter>Source Files\SDL3</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL3\SDL_process.h">
+      <Filter>Source Files\SDL3</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL3\SDL_properties.h">
+      <Filter>Source Files\SDL3</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL3\SDL_rect.h">
+      <Filter>Source Files\SDL3</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL3\SDL_render.h">
+      <Filter>Source Files\SDL3</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL3\SDL_revision.h">
+      <Filter>Source Files\SDL3</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL3\SDL_scancode.h">
+      <Filter>Source Files\SDL3</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL3\SDL_sensor.h">
+      <Filter>Source Files\SDL3</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL3\SDL_stdinc.h">
+      <Filter>Source Files\SDL3</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL3\SDL_storage.h">
+      <Filter>Source Files\SDL3</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL3\SDL_surface.h">
+      <Filter>Source Files\SDL3</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL3\SDL_system.h">
+      <Filter>Source Files\SDL3</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL3\SDL_test.h">
+      <Filter>Source Files\SDL3</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL3\SDL_test_assert.h">
+      <Filter>Source Files\SDL3</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL3\SDL_test_common.h">
+      <Filter>Source Files\SDL3</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL3\SDL_test_compare.h">
+      <Filter>Source Files\SDL3</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL3\SDL_test_crc32.h">
+      <Filter>Source Files\SDL3</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL3\SDL_test_font.h">
+      <Filter>Source Files\SDL3</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL3\SDL_test_fuzzer.h">
+      <Filter>Source Files\SDL3</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL3\SDL_test_harness.h">
+      <Filter>Source Files\SDL3</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL3\SDL_test_log.h">
+      <Filter>Source Files\SDL3</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL3\SDL_test_md5.h">
+      <Filter>Source Files\SDL3</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL3\SDL_test_memory.h">
+      <Filter>Source Files\SDL3</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL3\SDL_thread.h">
+      <Filter>Source Files\SDL3</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL3\SDL_time.h">
+      <Filter>Source Files\SDL3</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL3\SDL_timer.h">
+      <Filter>Source Files\SDL3</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL3\SDL_touch.h">
+      <Filter>Source Files\SDL3</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL3\SDL_tray.h">
+      <Filter>Source Files\SDL3</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL3\SDL_version.h">
+      <Filter>Source Files\SDL3</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL3\SDL_video.h">
+      <Filter>Source Files\SDL3</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL3\SDL_vulkan.h">
+      <Filter>Source Files\SDL3</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\lauxlib.h">
+      <Filter>Source Files\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\lj_alloc.h">
+      <Filter>Source Files\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\lj_arch.h">
+      <Filter>Source Files\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\lj_asm.h">
+      <Filter>Source Files\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\lj_asm_arm.h">
+      <Filter>Source Files\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\lj_asm_arm64.h">
+      <Filter>Source Files\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\lj_asm_mips.h">
+      <Filter>Source Files\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\lj_asm_ppc.h">
+      <Filter>Source Files\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\lj_asm_x86.h">
+      <Filter>Source Files\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\lj_bc.h">
+      <Filter>Source Files\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\lj_bcdump.h">
+      <Filter>Source Files\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\lj_buf.h">
+      <Filter>Source Files\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\lj_carith.h">
+      <Filter>Source Files\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\lj_ccall.h">
+      <Filter>Source Files\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\lj_ccallback.h">
+      <Filter>Source Files\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\lj_cconv.h">
+      <Filter>Source Files\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\lj_cdata.h">
+      <Filter>Source Files\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\lj_char.h">
+      <Filter>Source Files\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\lj_clib.h">
+      <Filter>Source Files\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\lj_cparse.h">
+      <Filter>Source Files\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\lj_crecord.h">
+      <Filter>Source Files\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\lj_ctype.h">
+      <Filter>Source Files\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\lj_debug.h">
+      <Filter>Source Files\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\lj_def.h">
+      <Filter>Source Files\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\lj_dispatch.h">
+      <Filter>Source Files\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\lj_emit_arm.h">
+      <Filter>Source Files\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\lj_emit_arm64.h">
+      <Filter>Source Files\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\lj_emit_mips.h">
+      <Filter>Source Files\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\lj_emit_ppc.h">
+      <Filter>Source Files\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\lj_emit_x86.h">
+      <Filter>Source Files\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\lj_err.h">
+      <Filter>Source Files\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\lj_errmsg.h">
+      <Filter>Source Files\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\lj_ff.h">
+      <Filter>Source Files\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\lj_ffrecord.h">
+      <Filter>Source Files\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\lj_frame.h">
+      <Filter>Source Files\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\lj_func.h">
+      <Filter>Source Files\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\lj_gc.h">
+      <Filter>Source Files\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\lj_gdbjit.h">
+      <Filter>Source Files\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\lj_ir.h">
+      <Filter>Source Files\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\lj_ircall.h">
+      <Filter>Source Files\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\lj_iropt.h">
+      <Filter>Source Files\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\lj_jit.h">
+      <Filter>Source Files\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\lj_lex.h">
+      <Filter>Source Files\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\lj_lib.h">
+      <Filter>Source Files\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\lj_mcode.h">
+      <Filter>Source Files\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\lj_meta.h">
+      <Filter>Source Files\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\lj_obj.h">
+      <Filter>Source Files\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\lj_parse.h">
+      <Filter>Source Files\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\lj_prng.h">
+      <Filter>Source Files\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\lj_profile.h">
+      <Filter>Source Files\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\lj_record.h">
+      <Filter>Source Files\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\lj_serialize.h">
+      <Filter>Source Files\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\lj_snap.h">
+      <Filter>Source Files\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\lj_state.h">
+      <Filter>Source Files\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\lj_str.h">
+      <Filter>Source Files\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\lj_strfmt.h">
+      <Filter>Source Files\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\lj_strscan.h">
+      <Filter>Source Files\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\lj_tab.h">
+      <Filter>Source Files\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\lj_target.h">
+      <Filter>Source Files\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\lj_target_arm.h">
+      <Filter>Source Files\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\lj_target_arm64.h">
+      <Filter>Source Files\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\lj_target_mips.h">
+      <Filter>Source Files\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\lj_target_ppc.h">
+      <Filter>Source Files\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\lj_target_s390x.h">
+      <Filter>Source Files\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\lj_target_x86.h">
+      <Filter>Source Files\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\lj_trace.h">
+      <Filter>Source Files\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\lj_traceerr.h">
+      <Filter>Source Files\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\lj_udata.h">
+      <Filter>Source Files\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\lj_vm.h">
+      <Filter>Source Files\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\lj_vmevent.h">
+      <Filter>Source Files\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\lua.h">
+      <Filter>Source Files\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\lua.hpp">
+      <Filter>Source Files\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\luaconf.h">
+      <Filter>Source Files\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\luajit.h">
+      <Filter>Source Files\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\lualib.h">
+      <Filter>Source Files\lua</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

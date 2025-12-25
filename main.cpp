@@ -1,29 +1,34 @@
-#include "sndEMU/dsp.h"
-#include "sndEMU/SPC_DSP.h"
-#include "sndEMU/SPC_Filter.h"
-#include "sndEMU/brrcodec.h"
-#include "lua/lauxlib.h"
-#include "lua/lua.h"
-#include "lua/lualib.h"
+#include <sndEMU/dsp.h>
+#include <sndEMU/SPC_DSP.h>
+#include <sndEMU/SPC_Filter.h>
+#include <lua/lauxlib.h>
+#include <lua/lua.h>
+#include <lua/lualib.h>
 #include <iostream>
 #include <stdio.h>
 #include <stdc++.h>
 #include <Windows.h>
+#include <SDL3/SDL.h>
 
-#define print(x) std::cout<<x<<endl;
-
-static SPC_DSP* dsp = spc_dsp_new();
-typedef SPC_DSP::uint8_t u8;
-typedef spc_dsp_sample_t smp_t;
-u8 aram[65536];
-using namespace std;
-u8 dirpos = 0, spos = 0;
-u8 aram_dir;
-u8 srcn;
-u8 smppos = 0;
-//u8* sample_ptr = aram_dir + srcn[smp] * 4;
-
+#ifndef print(x)
+#define print(x) std::cout<<x<<std::endl
+#endif
+#ifndef len(x)
 #define len(x) *(&x+1)-x
+#endif
+#ifndef w(x,y)
+#define w(x,y) dsp->write(x,y)
+#endif
+#ifndef r(x,y)
+#define r(x) dsp->read(x)
+#endif
+
+static int aram[65536];
+static SPC_DSP* dsp = new SPC_DSP;
+static SPC_Filter* f = new SPC_Filter;
+
+SDL_AudioSpec spec = { SDL_AUDIO_S16, 2, 32000 };
+SDL_AudioStream* stream = SDL_OpenAudioDeviceStream(SDL_AUDIO_DEVICE_DEFAULT_PLAYBACK, &spec, NULL, NULL);
 
 short c700sinewave[] = {
 	0b00000000, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -42,49 +47,55 @@ short c700sqwave[] = {
 	0b11000011, 0x77, 0x77, 0x77, 0x77, 0x77, 0x77, 0x77, 0x77
 };
 
-short instruments[];
-
-struct instrument {
-	u8 start;
-	u8 loop;
-	short data[];
-};
-
-u8 brr2aram(short ins[], int length) {
-	instrument x;
-
-	int lp = 0;
-	for (lp; lp < length; lp+=9) {
-		if (ins[lp] & 0b00000010) { x.loop = (int)ins[lp]; print(x.loop) }
-	}
-		for (smppos; smppos < 1;smppos++) {
-			aram[smppos] = ins[smppos];
-		} //Loading data into ARAM block
-
-	aram[aram_dir] = smppos & 255;
-	aram[aram_dir + 1] = smppos >> 8;
-	aram[aram_dir + 2] = lp & 255;
-	aram[aram_dir + 3] = lp >> 8;
-
-	print("loop point: " << lp << " (must be 54 and 45 in that order)\nstart point: " << smppos << " (must be 55 on the second run)");
-	smppos++;
-	aram_dir += 0x100; return smppos, aram_dir;
+void loadAudio() {
+	SDL_Init(SDL_INIT_AUDIO);
+	SDL_ResumeAudioStreamDevice(stream);
+	dsp->init(aram);
+	dsp->reset();
+	dsp->soft_reset();
 }
+
+void killAudio() {
+	SDL_DestroyAudioStream(stream);
+	SDL_Quit();
+}
+
+void demo(/*c700sinewave only for now*/) {
+
+	//load c700sinewave into ARAM DIR
+	w(dsp->r_dir, 0x67);
+	int dir = (r(dsp->r_dir)) << 8;
+	//loop detection
+	int lp = 0;
+	for (lp; lp < len(c700sinewave); lp += 9) {
+		if (c700sinewave[lp] & 2) {
+			lp = c700sinewave[lp]; break;
+		}
+	}
+	aram[dir + 2] = lp & 255;
+	aram[dir + 3] = lp >> 8;
+
+	//Plays the sound (hopefully)
+	#define BUF 2048
+	short buffer[BUF];
+	w(0x04,0); //V0SRCN, instrument 0 (supposedly 'c700sinewave')
+	w(0x4d, 0b00000001); //KON for V0 only
+	dsp->set_output(buffer, BUF);
+	for (int i = 0; i < BUF; i++) {
+		static int ptr = 0;
+		buffer[i] = c700sinewave[ptr++];
+		if (ptr == len(c700sinewave)) ptr = lp;
+	}
+	SDL_PutAudioStreamData(stream, buffer, sizeof(buffer));
+	while (SDL_GetAudioStreamQueued(stream) > 0) SDL_Delay(1);
+	killAudio();
+	dsp->run(1024); print(dsp->sample_count());
+}
+
 
 void main() {
-	aram_dir = (u8)dsp->read(0x5d) << 8;
-	if (!dsp) { dsp = spc_dsp_new(); }
-	dsp->init(aram);
-	dsp->write(0x5d, 0x67);
-	dsp->write(0x04, srcn);
-	brr2aram(c700sinewave, len(c700sinewave)); //adds the c700sinewave instrument
-	brr2aram(c700sqwave, len(c700sqwave)); //adds the c700sqwave instrument
-	vector<spc_dsp_sample_t> outbuf(1080);
-	dsp->set_output(outbuf.data(), 512);
-	dsp->write(0x4d, 0b00000001);
-	dsp->mute_voices(0);
-	dsp->run(10240000);
-	print("samples written: " << dsp->sample_count() << " (has to be 54)");
-	print("kon: " << dsp->check_kon());
 	print("Hello from CPP");
+	loadAudio();
+	demo();
 }
+

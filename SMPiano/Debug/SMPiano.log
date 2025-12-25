@@ -1,0 +1,15 @@
+﻿  dsp.cpp
+C:\Users\thech\Documents\GitHub\snes-daw-cpp\sndEMU\SPC_DSP.h(11,7): warning C4099: 'SPC_DSP': type name first seen using 'struct' now seen using 'class'
+  (compiling source file 'sndEMU/dsp.cpp')
+      C:\Users\thech\Documents\GitHub\snes-daw-cpp\sndEMU\SPC_DSP.h(11,7):
+      see declaration of 'SPC_DSP'
+  
+  SNES_SPC.cpp
+  SNES_SPC_misc.cpp
+  SNES_SPC_state.cpp
+  spc.cpp
+  SPC_DSP.cpp
+  SPC_Filter.cpp
+  main.cpp
+C:\Users\thech\Documents\GitHub\snes-daw-cpp\main.cpp(1,10): error C1083: Cannot open include file: 'sndEMU/dsp.h': No such file or directory
+  Generating Code...

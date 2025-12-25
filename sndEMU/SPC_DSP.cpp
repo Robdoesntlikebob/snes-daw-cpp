@@ -126,7 +126,6 @@ static short const gauss [512] =
 1299,1300,1300,1301,1302,1302,1303,1303,1303,1304,1304,1304,1304,1304,1305,1305,
 };
 
-
 inline int SPC_DSP::interpolate( voice_t const* v )
 {
 	// Make pointers into gaussian based on fractional position between samples
@@ -147,8 +146,6 @@ inline int SPC_DSP::interpolate( voice_t const* v )
 	return out;
 }
 
-//stole it from furnace lmaoooo
-void SPC_DSP::setupInterpolation(bool interpolate) { for (int i = 0;i < voice_count;i++) { m.voices[i].interpolate = interpolate; } }
 
 //// Counters
 
