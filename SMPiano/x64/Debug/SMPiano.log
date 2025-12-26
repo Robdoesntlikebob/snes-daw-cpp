@@ -7,9 +7,9 @@ C:\Users\thech\Documents\GitHub\snes-daw-cpp\sndEMU\SPC_DSP.h(11,7): warning C40
 C:\Users\thech\Documents\GitHub\snes-daw-cpp\sndEMU\SPC_DSP.h(238,57): warning C4244: 'return': conversion from '__int64' to 'int', possible loss of data
   (compiling source file 'main.cpp')
   
-C:\Users\thech\Documents\GitHub\snes-daw-cpp\main.cpp(13,1): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-C:\Users\thech\Documents\GitHub\snes-daw-cpp\main.cpp(16,1): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-C:\Users\thech\Documents\GitHub\snes-daw-cpp\main.cpp(19,1): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-C:\Users\thech\Documents\GitHub\snes-daw-cpp\main.cpp(22,1): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\thech\Documents\GitHub\snes-daw-cpp\main.cpp(14,1): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\thech\Documents\GitHub\snes-daw-cpp\main.cpp(17,1): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\thech\Documents\GitHub\snes-daw-cpp\main.cpp(20,1): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\thech\Documents\GitHub\snes-daw-cpp\main.cpp(23,1): warning C4067: unexpected tokens following preprocessor directive - expected a newline
 C:\Users\thech\Documents\GitHub\snes-daw-cpp\main.cpp(96,6): warning C4326: return type of 'main' should be 'int' instead of 'void'
   SMPiano.vcxproj -> C:\Users\thech\Documents\GitHub\snes-daw-cpp\x64\Debug\SMPiano.exe

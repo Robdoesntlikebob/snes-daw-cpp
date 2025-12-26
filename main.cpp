@@ -9,6 +9,7 @@
 #include <stdc++.h>
 #include <Windows.h>
 #include <SDL3/SDL.h>
+#include <SDL3/SDL_audio.h>
 
 #ifndef print(x)
 #define print(x) std::cout<<x<<std::endl
@@ -22,13 +23,14 @@
 #ifndef r(x,y)
 #define r(x) dsp->read(x)
 #endif
+typedef std::string str;
 
+SDL_AudioSpec spec = { SDL_AUDIO_S16, 2, 32000 };
+SDL_AudioStream* stream = SDL_OpenAudioDeviceStream(SDL_AUDIO_DEVICE_DEFAULT_PLAYBACK, &spec, NULL, NULL);
 static int aram[65536];
 static SPC_DSP* dsp = new SPC_DSP;
 static SPC_Filter* f = new SPC_Filter;
 
-SDL_AudioSpec spec = { SDL_AUDIO_S16, 2, 32000 };
-SDL_AudioStream* stream = SDL_OpenAudioDeviceStream(SDL_AUDIO_DEVICE_DEFAULT_PLAYBACK, &spec, NULL, NULL);
 
 short c700sinewave[] = {
 	0b00000000, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -48,8 +50,7 @@ short c700sqwave[] = {
 };
 
 void loadAudio() {
-	SDL_Init(SDL_INIT_AUDIO);
-	SDL_ResumeAudioStreamDevice(stream);
+	SDL_InitSubSystem(SDL_INIT_AUDIO);
 	dsp->init(aram);
 	dsp->reset();
 	dsp->soft_reset();
@@ -86,8 +87,7 @@ void demo(/*c700sinewave only for now*/) {
 		buffer[i] = c700sinewave[ptr++];
 		if (ptr == len(c700sinewave)) ptr = lp;
 	}
-	SDL_PutAudioStreamData(stream, buffer, sizeof(buffer));
-	while (SDL_GetAudioStreamQueued(stream) > 0) SDL_Delay(1);
+	for (int i = 0; i < 2048; i++) print(buffer[i]);
 	killAudio();
 	dsp->run(1024); print(dsp->sample_count());
 }
