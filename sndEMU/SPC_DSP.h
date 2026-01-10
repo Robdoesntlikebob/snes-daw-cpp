@@ -245,8 +245,9 @@ inline int SPC_DSP::read( int addr ) const
 
 inline void SPC_DSP::write( int addr, int data )
 {
+
 	assert( (unsigned) addr < register_count );
-	
+
 	m.regs [addr] = (uint8_t) data;
 	switch ( addr & 0x0F )
 	{

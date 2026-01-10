@@ -1,0 +1,20 @@
+﻿  main.cpp
+C:\Users\thech\Documents\GitHub\snes-daw-cpp\sndEMU\SPC_DSP.h(11,7): warning C4099: 'SPC_DSP': type name first seen using 'struct' now seen using 'class'
+  (compiling source file 'main.cpp')
+      C:\Users\thech\Documents\GitHub\snes-daw-cpp\sndEMU\SPC_DSP.h(11,7):
+      see declaration of 'SPC_DSP'
+  
+C:\Users\thech\Documents\GitHub\snes-daw-cpp\sndEMU\SPC_DSP.h(238,57): warning C4244: 'return': conversion from '__int64' to 'int', possible loss of data
+  (compiling source file 'main.cpp')
+  
+C:\Users\thech\Documents\GitHub\snes-daw-cpp\main.cpp(19,1): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\thech\Documents\GitHub\snes-daw-cpp\main.cpp(22,1): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\thech\Documents\GitHub\snes-daw-cpp\main.cpp(25,1): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\thech\Documents\GitHub\snes-daw-cpp\main.cpp(28,1): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\thech\Documents\GitHub\snes-daw-cpp\main.cpp(109,6): warning C4326: return type of 'main' should be 'int' instead of 'void'
+  Generating code
+  0 of 39 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  SMPiano.vcxproj -> C:\Users\thech\Documents\GitHub\snes-daw-cpp\x64\Release\SMPiano.exe

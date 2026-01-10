@@ -1,101 +1,81 @@
-#include <sndEMU/dsp.h>
-#include <sndEMU/SPC_DSP.h>
-#include <sndEMU/SPC_Filter.h>
-#include <lua/lauxlib.h>
-#include <lua/lua.h>
-#include <lua/lualib.h>
-#include <iostream>
-#include <stdio.h>
-#include <stdc++.h>
-#include <Windows.h>
-#include <SDL3/SDL.h>
-#include <SDL3/SDL_audio.h>
+#include <main.h>
 
-#ifndef print(x)
-#define print(x) std::cout<<x<<std::endl
-#endif
-#ifndef len(x)
-#define len(x) *(&x+1)-x
-#endif
-#ifndef w(x,y)
-#define w(x,y) dsp->write(x,y)
-#endif
-#ifndef r(x,y)
-#define r(x) dsp->read(x)
-#endif
-typedef std::string str;
-
-SDL_AudioSpec spec = { SDL_AUDIO_S16, 2, 32000 };
-SDL_AudioStream* stream = SDL_OpenAudioDeviceStream(SDL_AUDIO_DEVICE_DEFAULT_PLAYBACK, &spec, NULL, NULL);
-static int aram[65536];
+using namespace sf;
+u8* aram = new u8[65536];
 static SPC_DSP* dsp = new SPC_DSP;
 static SPC_Filter* f = new SPC_Filter;
 
 
-short c700sinewave[] = {
-	0b00000000, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0b10101100, 0x06, 0x11, 0x10, 0x00, 0x0F, 0xFF, 0xFF, 0xFE,
-	0b01101000, 0xEA, 0xAC, 0xCE, 0xF1, 0x14, 0x36, 0x66, 0x77,
-	0b01101000, 0x76, 0x55, 0x41, 0x2F, 0xEE, 0xBB, 0xAA, 0x99,
-	0b01101000, 0xEA, 0xAC, 0xCE, 0xF1, 0x14, 0x36, 0x66, 0x77,
-	0b01101011, 0x76, 0x55, 0x41, 0x2F, 0xEE, 0xBB, 0xAA, 0x99
-};
+void demo(/*c700sinewave only for now*/) {
 
-short c700sqwave[] = {
-	0b10000100, 0x00, 0x00, 0x77, 0x77, 0x77, 0x77, 0x77, 0x77,
-	0b11000000, 0x99, 0x99, 0x99, 0x99, 0x99, 0x99, 0x99, 0x99,
-	0b11000000, 0x99, 0x99, 0x99, 0x99, 0x99, 0x99, 0x99, 0x99,
-	0b11000000, 0x77, 0x77, 0x77, 0x77, 0x77, 0x77, 0x77, 0x77,
-	0b11000011, 0x77, 0x77, 0x77, 0x77, 0x77, 0x77, 0x77, 0x77
-};
+	w(dsp->r_dir, 0x67);
+	int dir = (r(dsp->r_dir)) << 8; //load c700sinewave into ARAM DIR
+	int lp = 0;
+	for (int i = 0; i < len(c700sinewave); i += 9) {
+		if (c700sinewave[i] & 2) {
+			lp = i; break;
+		}
+	}//loop detection
+	aram[dir + 2] = lp & 255;
+	aram[dir + 3] = lp >> 8;
+	//Writing to ARAM DIR
 
-void loadAudio() {
-	SDL_InitSubSystem(SDL_INIT_AUDIO);
+	//Plays the sound (hopefully)
+#define BUF 2048
+	short buffer[BUF];
+	w(0x04, 0); //V0SRCN, instrument 0 (supposedly 'c700sinewave')
+	w(0x4d, 0b00000001); //KON for V0 only
+	//Writing to buffer
+	for (int i = 0; i < BUF; i++) {
+		static int ptr = 0;
+		if (ptr % 9 == 0) { ptr++;  continue; }
+		buffer[i] = c700sinewave[ptr++];
+		buffer[i] = (buffer[i] << 8) - 32768;
+		if (ptr == len(c700sinewave)) ptr = lp;
+	}
+	dsp->set_output(buffer, BUF);
+	dsp->run(32736); print("DSP sample count: "<<dsp->sample_count());
+}
+
+void main() {
 	dsp->init(aram);
 	dsp->reset();
 	dsp->soft_reset();
-}
-
-void killAudio() {
-	SDL_DestroyAudioStream(stream);
-	SDL_Quit();
-}
-
-void demo(/*c700sinewave only for now*/) {
-
-	//load c700sinewave into ARAM DIR
-	w(dsp->r_dir, 0x67);
-	int dir = (r(dsp->r_dir)) << 8;
-	//loop detection
-	int lp = 0;
-	for (lp; lp < len(c700sinewave); lp += 9) {
-		if (c700sinewave[lp] & 2) {
-			lp = c700sinewave[lp]; break;
-		}
-	}
-	aram[dir + 2] = lp & 255;
-	aram[dir + 3] = lp >> 8;
-
-	//Plays the sound (hopefully)
-	#define BUF 2048
-	short buffer[BUF];
-	w(0x04,0); //V0SRCN, instrument 0 (supposedly 'c700sinewave')
-	w(0x4d, 0b00000001); //KON for V0 only
-	dsp->set_output(buffer, BUF);
-	for (int i = 0; i < BUF; i++) {
-		static int ptr = 0;
-		buffer[i] = c700sinewave[ptr++];
-		if (ptr == len(c700sinewave)) ptr = lp;
-	}
-	for (int i = 0; i < 2048; i++) print(buffer[i]);
-	killAudio();
-	dsp->run(1024); print(dsp->sample_count());
-}
-
-
-void main() {
 	print("Hello from CPP");
-	loadAudio();
-	demo();
-}
+	RenderWindow window(VideoMode({ 1280,720 }), "SMPiano", Style::Default);
+	RectangleShape demobtn({});
+	demobtn.setSize({ 150, 50 });
+	demobtn.setOrigin(demobtn.getLocalBounds().getCenter());
+	bool pressed = false;
+	while (window.isOpen()) {
+		auto mpos = Vector2f(Mouse::getPosition(window));
+		while (const std::optional event = window.pollEvent()) {
+			#define event(n) event->is<Event::##n>()
+			if (event(Closed)) {
+				window.close();
+			}
+			if (event(Resized)) {
+				View view(sf::FloatRect({ 0,0 }, Vector2f(window.getSize())));
+				window.setView(view);
+			}
+			if (event(MouseButtonPressed) && demobtn.getGlobalBounds().contains(mpos) && Mouse::isButtonPressed(Mouse::Button::Left)) {
+				demo();
+			}
+		}//end of if statements
+		window.clear(Color(0xb5, 0xb6, 0xe4, 255)); //set bg (always keep up here)
+
+		auto [wwidth, wheight] = window.getSize();
+
+		demobtn.setPosition({wwidth / 2.0f, wheight / 2.0f});
+		window.draw(demobtn);
+		if (demobtn.getGlobalBounds().contains(mpos)) {
+			if (Mouse::isButtonPressed(Mouse::Button::Left)) {
+				demobtn.setFillColor(Color(0x40, 0x40, 0x40));
+			}
+			else { demobtn.setFillColor(Color(0x7f, 0x7f, 0x7f)); }
+		}
+		else { demobtn.setFillColor(Color(0xff, 0xff, 0xff)); }
+		window.display(); //update
+	}//end of window
+}//end of main()
 
