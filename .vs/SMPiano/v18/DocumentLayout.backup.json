@@ -5,10 +5,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{E1F65537-F2C5-44DE-8CE9-AA575C9DFEFB}|SMPiano.vcxproj|C:\\Users\\thech\\Documents\\GitHub\\snes-daw-cpp\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{E1F65537-F2C5-44DE-8CE9-AA575C9DFEFB}|SMPiano.vcxproj|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E1F65537-F2C5-44DE-8CE9-AA575C9DFEFB}|SMPiano.vcxproj|C:\\Users\\thech\\Documents\\GitHub\\snes-daw-cpp\\sndEMU\\dsp.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{E1F65537-F2C5-44DE-8CE9-AA575C9DFEFB}|SMPiano.vcxproj|solutionrelative:sndEMU\\dsp.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,22 +14,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "dsp.h",
-              "DocumentMoniker": "C:\\Users\\thech\\Documents\\GitHub\\snes-daw-cpp\\sndEMU\\dsp.h",
-              "RelativeDocumentMoniker": "sndEMU\\dsp.h",
-              "ToolTip": "C:\\Users\\thech\\Documents\\GitHub\\snes-daw-cpp\\sndEMU\\dsp.h",
-              "RelativeToolTip": "sndEMU\\dsp.h",
-              "ViewState": "AgIAAC8AAAAAAAAAAAAkwDkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-01-03T18:47:04.345Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -42,9 +24,9 @@
               "RelativeDocumentMoniker": "main.cpp",
               "ToolTip": "C:\\Users\\thech\\Documents\\GitHub\\snes-daw-cpp\\main.cpp",
               "RelativeToolTip": "main.cpp",
-              "ViewState": "AgIAADwAAAAAAAAAAAAAACMAAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAACgAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-01-03T18:52:53.265Z",
+              "WhenOpened": "2026-01-11T18:44:12.694Z",
               "EditorCaption": ""
             }
           ]

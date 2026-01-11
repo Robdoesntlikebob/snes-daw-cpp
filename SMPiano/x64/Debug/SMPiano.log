@@ -19,69 +19,8 @@ C:\Users\thech\Documents\GitHub\snes-daw-cpp\main.h(25,1): warning C4067: unexpe
 C:\Users\thech\Documents\GitHub\snes-daw-cpp\main.h(28,1): warning C4067: unexpected tokens following preprocessor directive - expected a newline
   (compiling source file 'main.cpp')
   
-C:\Users\thech\Documents\GitHub\snes-daw-cpp\main.cpp(40,6): warning C4326: return type of 'main' should be 'int' instead of 'void'
-  SNES_SPC.cpp
-C:\Users\thech\Documents\GitHub\snes-daw-cpp\sndEMU\SPC_DSP.h(238,57): warning C4244: 'return': conversion from '__int64' to 'int', possible loss of data
-  (compiling source file 'sndEMU/SNES_SPC.cpp')
-  
-C:\Users\thech\Documents\GitHub\snes-daw-cpp\sndEMU\SPC_CPU.h(245,16): warning C4244: 'initializing': conversion from '__int64' to 'int', possible loss of data
-  (compiling source file 'sndEMU/SNES_SPC.cpp')
-  
-C:\Users\thech\Documents\GitHub\snes-daw-cpp\sndEMU\SPC_CPU.h(247,3): warning C4244: 'initializing': conversion from '__int64' to 'int', possible loss of data
-  (compiling source file 'sndEMU/SNES_SPC.cpp')
-  
-C:\Users\thech\Documents\GitHub\snes-daw-cpp\sndEMU\SPC_CPU.h(259,13): warning C4244: 'initializing': conversion from '__int64' to 'int', possible loss of data
-  (compiling source file 'sndEMU/SNES_SPC.cpp')
-  
-C:\Users\thech\Documents\GitHub\snes-daw-cpp\sndEMU\SPC_CPU.h(477,12): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
-  (compiling source file 'sndEMU/SNES_SPC.cpp')
-  
-C:\Users\thech\Documents\GitHub\snes-daw-cpp\sndEMU\SPC_CPU.h(961,16): warning C4244: 'initializing': conversion from '__int64' to 'int', possible loss of data
-  (compiling source file 'sndEMU/SNES_SPC.cpp')
-  
-C:\Users\thech\Documents\GitHub\snes-daw-cpp\sndEMU\SPC_CPU.h(964,3): warning C4244: 'initializing': conversion from '__int64' to 'int', possible loss of data
-  (compiling source file 'sndEMU/SNES_SPC.cpp')
-  
-C:\Users\thech\Documents\GitHub\snes-daw-cpp\sndEMU\SPC_CPU.h(972,16): warning C4244: 'initializing': conversion from '__int64' to 'int', possible loss of data
-  (compiling source file 'sndEMU/SNES_SPC.cpp')
-  
-C:\Users\thech\Documents\GitHub\snes-daw-cpp\sndEMU\SPC_CPU.h(974,3): warning C4244: 'initializing': conversion from '__int64' to 'int', possible loss of data
-  (compiling source file 'sndEMU/SNES_SPC.cpp')
-  
-C:\Users\thech\Documents\GitHub\snes-daw-cpp\sndEMU\SPC_CPU.h(994,16): warning C4244: 'initializing': conversion from '__int64' to 'int', possible loss of data
-  (compiling source file 'sndEMU/SNES_SPC.cpp')
-  
-C:\Users\thech\Documents\GitHub\snes-daw-cpp\sndEMU\SPC_CPU.h(996,3): warning C4244: 'initializing': conversion from '__int64' to 'int', possible loss of data
-  (compiling source file 'sndEMU/SNES_SPC.cpp')
-  
-C:\Users\thech\Documents\GitHub\snes-daw-cpp\sndEMU\SPC_CPU.h(1182,17): warning C4244: 'initializing': conversion from '__int64' to 'unsigned int', possible loss of data
-  (compiling source file 'sndEMU/SNES_SPC.cpp')
-  
-  SNES_SPC_misc.cpp
-C:\Users\thech\Documents\GitHub\snes-daw-cpp\sndEMU\SPC_DSP.h(238,57): warning C4244: 'return': conversion from '__int64' to 'int', possible loss of data
-  (compiling source file 'sndEMU/SNES_SPC_misc.cpp')
-  
-C:\Users\thech\Documents\GitHub\snes-daw-cpp\sndEMU\SNES_SPC_misc.cpp(306,32): warning C4244: 'argument': conversion from '__int64' to 'int', possible loss of data
-  SNES_SPC_state.cpp
-C:\Users\thech\Documents\GitHub\snes-daw-cpp\sndEMU\SPC_DSP.h(238,57): warning C4244: 'return': conversion from '__int64' to 'int', possible loss of data
-  (compiling source file 'sndEMU/SNES_SPC_state.cpp')
-  
-  SPC_DSP.cpp
-C:\Users\thech\Documents\GitHub\snes-daw-cpp\sndEMU\SPC_DSP.h(238,57): warning C4244: 'return': conversion from '__int64' to 'int', possible loss of data
-  (compiling source file 'sndEMU/SPC_DSP.cpp')
-  
-  dsp.cpp
-C:\Users\thech\Documents\GitHub\snes-daw-cpp\sndEMU\SPC_DSP.h(11,7): warning C4099: 'SPC_DSP': type name first seen using 'struct' now seen using 'class'
-  (compiling source file 'sndEMU/dsp.cpp')
-      C:\Users\thech\Documents\GitHub\snes-daw-cpp\sndEMU\SPC_DSP.h(11,7):
-      see declaration of 'SPC_DSP'
-  
-C:\Users\thech\Documents\GitHub\snes-daw-cpp\sndEMU\SPC_DSP.h(238,57): warning C4244: 'return': conversion from '__int64' to 'int', possible loss of data
-  (compiling source file 'sndEMU/dsp.cpp')
-  
-  spc.cpp
-C:\Users\thech\Documents\GitHub\snes-daw-cpp\sndEMU\SPC_DSP.h(238,57): warning C4244: 'return': conversion from '__int64' to 'int', possible loss of data
-  (compiling source file 'sndEMU/spc.cpp')
-  
-  Generating Code...
+C:\Users\thech\Documents\GitHub\snes-daw-cpp\main.cpp(24,11): warning C4553: '==': result of expression not used; did you intend '='?
+C:\Users\thech\Documents\GitHub\snes-daw-cpp\main.cpp(55,6): warning C4326: return type of 'main' should be 'int' instead of 'void'
+C:\Users\thech\Documents\GitHub\snes-daw-cpp\main.cpp(60,23): warning C4244: 'argument': conversion from '__int64' to 'short', possible loss of data
+C:\Users\thech\Documents\GitHub\snes-daw-cpp\main.cpp(62,21): warning C4244: 'argument': conversion from '__int64' to 'short', possible loss of data
   SMPiano.vcxproj -> C:\Users\thech\Documents\GitHub\snes-daw-cpp\x64\Debug\SMPiano.exe

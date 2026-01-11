@@ -5,43 +5,64 @@ u8* aram = new u8[65536];
 static SPC_DSP* dsp = new SPC_DSP;
 static SPC_Filter* f = new SPC_Filter;
 
+int smppos, dspDIR;
+int dir = 0x6700;
 
-void demo(/*c700sinewave only for now*/) {
-
+void toaram(short* sample, short length) {
 	w(dsp->r_dir, 0x67);
-	int dir = (r(dsp->r_dir)) << 8; //load c700sinewave into ARAM DIR
 	int lp = 0;
+
+	//loop detection starts here
 	for (int i = 0; i < len(c700sinewave); i += 9) {
 		if (c700sinewave[i] & 2) {
-			lp = i; break;
+			lp = i; break; print(lp);
 		}
-	}//loop detection
+	}//loop detection ends here
+
+	//start of writing samples
+	for (int x = 0; x < length;x++) {
+		aram[x] == sample[x];
+		smppos += 1;
+	}//end of writing samples
+
+	aram[dir] = smppos & 255;
+	aram[dir + 1] = smppos >> 8;
 	aram[dir + 2] = lp & 255;
 	aram[dir + 3] = lp >> 8;
-	//Writing to ARAM DIR
 
-	//Plays the sound (hopefully)
-#define BUF 2048
-	short buffer[BUF];
-	w(0x04, 0); //V0SRCN, instrument 0 (supposedly 'c700sinewave')
-	w(0x4d, 0b00000001); //KON for V0 only
-	//Writing to buffer
-	for (int i = 0; i < BUF; i++) {
-		static int ptr = 0;
-		if (ptr % 9 == 0) { ptr++;  continue; }
-		buffer[i] = c700sinewave[ptr++];
-		buffer[i] = (buffer[i] << 8) - 32768;
-		if (ptr == len(c700sinewave)) ptr = lp;
-	}
+	dir += 0x100;
+
+}
+
+void demo(int srcn) {
+	#define BUF 1024
+	spc_dsp_sample_t buffer[BUF];
+	w(0x04, srcn); //V0SRCN, instrument 0 (supposedly 'c700sinewave')
+	w(dsp->r_kon, 0b00000001); //KON for V0 only
+	w(dsp->r_mvoll, 0x7f);
+	w(dsp->r_mvolr, 0x7f);
 	dsp->set_output(buffer, BUF);
-	dsp->run(32736); print("DSP sample count: "<<dsp->sample_count());
+	dsp->run((BUF*16)-32);
+
+	/*debug: check that sound is actually being written to buffer*/
+	for (auto i : buffer) {
+		print(buffer[i]);
+	}
+	if (dsp->check_kon() == 1) { print("how tf is KON on tho? KON = " << dsp->check_kon()); }
+	print("DSP sample count: "<<dsp->sample_count());
 }
 
 void main() {
 	dsp->init(aram);
 	dsp->reset();
 	dsp->soft_reset();
-	print("Hello from CPP");
+	w(dsp->r_dir, 0x67);
+	toaram(c700sinewave, len(c700sinewave));
+	printf("0x%04X\n",dir);
+	toaram(c700sqwave, len(c700sqwave));
+	printf("0x%04X\n",dir);
+
+	print("Hello from SMPiano.");
 	RenderWindow window(VideoMode({ 1280,720 }), "SMPiano", Style::Default);
 	RectangleShape demobtn({});
 	demobtn.setSize({ 150, 50 });
@@ -59,7 +80,7 @@ void main() {
 				window.setView(view);
 			}
 			if (event(MouseButtonPressed) && demobtn.getGlobalBounds().contains(mpos) && Mouse::isButtonPressed(Mouse::Button::Left)) {
-				demo();
+				demo(1);
 			}
 		}//end of if statements
 		window.clear(Color(0xb5, 0xb6, 0xe4, 255)); //set bg (always keep up here)
