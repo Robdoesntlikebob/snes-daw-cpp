@@ -1,4 +1,56 @@
-﻿  main.cpp
+﻿  SNES.cpp
+C:\Users\thech\Documents\GitHub\snes-daw-cpp\sndEMU\SPC_DSP.h(11,7): warning C4099: 'SPC_DSP': type name first seen using 'struct' now seen using 'class'
+  (compiling source file 'SNES.cpp')
+      C:\Users\thech\Documents\GitHub\snes-daw-cpp\sndEMU\SPC_DSP.h(11,7):
+      see declaration of 'SPC_DSP'
+  
+C:\Users\thech\Documents\GitHub\snes-daw-cpp\sndEMU\SPC_DSP.h(238,57): warning C4244: 'return': conversion from '__int64' to 'int', possible loss of data
+  (compiling source file 'SNES.cpp')
+  
+C:\Users\thech\Documents\GitHub\snes-daw-cpp\SNES.h(120,8): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  (compiling source file 'SNES.cpp')
+  
+C:\Users\thech\Documents\GitHub\snes-daw-cpp\SNES.h(121,8): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  (compiling source file 'SNES.cpp')
+  
+C:\Users\thech\Documents\GitHub\snes-daw-cpp\SNES.h(122,8): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  (compiling source file 'SNES.cpp')
+  
+C:\Users\thech\Documents\GitHub\snes-daw-cpp\SNES.h(123,8): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  (compiling source file 'SNES.cpp')
+  
+C:\Users\thech\Documents\GitHub\snes-daw-cpp\SNES.h(151,38): warning C4554: '>>': check operator precedence for possible error; use parentheses to clarify precedence
+  (compiling source file 'SNES.cpp')
+  
+C:\Users\thech\Documents\GitHub\snes-daw-cpp\SNES.h(168,27): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file 'SNES.cpp')
+  
+C:\Users\thech\Documents\GitHub\snes-daw-cpp\SNES.h(179,27): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file 'SNES.cpp')
+  
+C:\Users\thech\Documents\GitHub\snes-daw-cpp\SNES.h(187,9): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+  (compiling source file 'SNES.cpp')
+  
+C:\Users\thech\Documents\GitHub\snes-daw-cpp\SNES.h(188,9): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+  (compiling source file 'SNES.cpp')
+  
+C:\Users\thech\Documents\GitHub\snes-daw-cpp\SNES.h(201,9): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+  (compiling source file 'SNES.cpp')
+  
+C:\Users\thech\Documents\GitHub\snes-daw-cpp\SNES.h(202,9): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+  (compiling source file 'SNES.cpp')
+  
+C:\Users\thech\Documents\GitHub\snes-daw-cpp\SNES.cpp(2,9): warning C4005: 'w': macro redefinition
+      C:\Users\thech\Documents\GitHub\snes-daw-cpp\SNES.h(124,9):
+      see previous definition of 'w'
+  
+C:\Users\thech\Documents\GitHub\snes-daw-cpp\SNES.cpp(8,18): warning C4018: '>': signed/unsigned mismatch
+C:\Users\thech\Documents\GitHub\snes-daw-cpp\SNES.cpp(31,36): warning C4554: '>>': check operator precedence for possible error; use parentheses to clarify precedence
+C:\Users\thech\Documents\GitHub\snes-daw-cpp\SNES.cpp(44,5): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\thech\Documents\GitHub\snes-daw-cpp\SNES.cpp(45,5): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\thech\Documents\GitHub\snes-daw-cpp\SNES.cpp(58,5): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\thech\Documents\GitHub\snes-daw-cpp\SNES.cpp(59,5): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+  main.cpp
 C:\Users\thech\Documents\GitHub\snes-daw-cpp\sndEMU\SPC_DSP.h(11,7): warning C4099: 'SPC_DSP': type name first seen using 'struct' now seen using 'class'
   (compiling source file 'main.cpp')
       C:\Users\thech\Documents\GitHub\snes-daw-cpp\sndEMU\SPC_DSP.h(11,7):
@@ -7,20 +59,52 @@ C:\Users\thech\Documents\GitHub\snes-daw-cpp\sndEMU\SPC_DSP.h(11,7): warning C40
 C:\Users\thech\Documents\GitHub\snes-daw-cpp\sndEMU\SPC_DSP.h(238,57): warning C4244: 'return': conversion from '__int64' to 'int', possible loss of data
   (compiling source file 'main.cpp')
   
-C:\Users\thech\Documents\GitHub\snes-daw-cpp\main.h(19,1): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\thech\Documents\GitHub\snes-daw-cpp\SNES.h(120,8): warning C4067: unexpected tokens following preprocessor directive - expected a newline
   (compiling source file 'main.cpp')
   
-C:\Users\thech\Documents\GitHub\snes-daw-cpp\main.h(22,1): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\thech\Documents\GitHub\snes-daw-cpp\SNES.h(121,8): warning C4067: unexpected tokens following preprocessor directive - expected a newline
   (compiling source file 'main.cpp')
   
-C:\Users\thech\Documents\GitHub\snes-daw-cpp\main.h(25,1): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\thech\Documents\GitHub\snes-daw-cpp\SNES.h(122,8): warning C4067: unexpected tokens following preprocessor directive - expected a newline
   (compiling source file 'main.cpp')
   
-C:\Users\thech\Documents\GitHub\snes-daw-cpp\main.h(28,1): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\thech\Documents\GitHub\snes-daw-cpp\SNES.h(123,8): warning C4067: unexpected tokens following preprocessor directive - expected a newline
   (compiling source file 'main.cpp')
   
-C:\Users\thech\Documents\GitHub\snes-daw-cpp\main.cpp(24,11): warning C4553: '==': result of expression not used; did you intend '='?
-C:\Users\thech\Documents\GitHub\snes-daw-cpp\main.cpp(55,6): warning C4326: return type of 'main' should be 'int' instead of 'void'
-C:\Users\thech\Documents\GitHub\snes-daw-cpp\main.cpp(60,23): warning C4244: 'argument': conversion from '__int64' to 'short', possible loss of data
-C:\Users\thech\Documents\GitHub\snes-daw-cpp\main.cpp(62,21): warning C4244: 'argument': conversion from '__int64' to 'short', possible loss of data
-  SMPiano.vcxproj -> C:\Users\thech\Documents\GitHub\snes-daw-cpp\x64\Debug\SMPiano.exe
+C:\Users\thech\Documents\GitHub\snes-daw-cpp\SNES.h(151,38): warning C4554: '>>': check operator precedence for possible error; use parentheses to clarify precedence
+  (compiling source file 'main.cpp')
+  
+C:\Users\thech\Documents\GitHub\snes-daw-cpp\SNES.h(168,27): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file 'main.cpp')
+  
+C:\Users\thech\Documents\GitHub\snes-daw-cpp\SNES.h(179,27): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file 'main.cpp')
+  
+C:\Users\thech\Documents\GitHub\snes-daw-cpp\SNES.h(187,9): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+  (compiling source file 'main.cpp')
+  
+C:\Users\thech\Documents\GitHub\snes-daw-cpp\SNES.h(188,9): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+  (compiling source file 'main.cpp')
+  
+C:\Users\thech\Documents\GitHub\snes-daw-cpp\SNES.h(201,9): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+  (compiling source file 'main.cpp')
+  
+C:\Users\thech\Documents\GitHub\snes-daw-cpp\SNES.h(202,9): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+  (compiling source file 'main.cpp')
+  
+C:\Users\thech\Documents\GitHub\snes-daw-cpp\main.cpp(5,6): warning C4326: return type of 'main' should be 'int' instead of 'void'
+  Generating Code...
+C:\Users\thech\Documents\GitHub\snes-daw-cpp\SNES.h(23,1): warning C4715: 'out': not all control paths return a value
+C:\Users\thech\Documents\GitHub\snes-daw-cpp\SNES.h(23,1): warning C4715: 'out': not all control paths return a value
+SNES.obj : error LNK2005: "int __cdecl out(void)" (?out@@YAHXZ) already defined in main.obj
+SNES.obj : error LNK2005: "unsigned int smppos" (?smppos@@3IA) already defined in main.obj
+SNES.obj : error LNK2005: "unsigned int dirposition" (?dirposition@@3IA) already defined in main.obj
+SNES.obj : error LNK2005: "unsigned int smplimit" (?smplimit@@3IA) already defined in main.obj
+SNES.obj : error LNK2005: "int sample_count" (?sample_count@@3HA) already defined in main.obj
+SNES.obj : error LNK2005: "unsigned char * BRR_SAWTOOTH" (?BRR_SAWTOOTH@@3PAEA) already defined in main.obj
+SNES.obj : error LNK2005: "unsigned char * c700sqwave" (?c700sqwave@@3PAEA) already defined in main.obj
+SNES.obj : error LNK2005: "int vxkon" (?vxkon@@3HA) already defined in main.obj
+SNES.obj : error LNK2005: "class SPC_DSP * dsp" (?dsp@@3PEAVSPC_DSP@@EA) already defined in main.obj
+SNES.obj : error LNK2005: "char * aram" (?aram@@3PEADEA) already defined in main.obj
+SNES.obj : error LNK2005: "short * output" (?output@@3PEAFEA) already defined in main.obj
+C:\Users\thech\Documents\GitHub\snes-daw-cpp\x64\Debug\SMPiano.exe : fatal error LNK1169: one or more multiply defined symbols found

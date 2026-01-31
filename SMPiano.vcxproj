@@ -146,6 +146,7 @@
     <ClCompile Include="sndEMU\SPC_DSP.cpp" />
     <ClCompile Include="sndEMU\SPC_Filter.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="SNES.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="lua\lauxlib.h" />
@@ -319,6 +320,7 @@
     <ClInclude Include="sndEMU\SPC_CPU.h" />
     <ClInclude Include="sndEMU\SPC_DSP.h" />
     <ClInclude Include="sndEMU\SPC_Filter.h" />
+    <ClInclude Include="SNES.h" />
     <ClInclude Include="stdc++.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

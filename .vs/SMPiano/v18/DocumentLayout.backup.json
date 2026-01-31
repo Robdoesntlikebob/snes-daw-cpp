@@ -5,6 +5,18 @@
     {
       "AbsoluteMoniker": "D:0:0:{E1F65537-F2C5-44DE-8CE9-AA575C9DFEFB}|SMPiano.vcxproj|C:\\Users\\thech\\Documents\\GitHub\\snes-daw-cpp\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{E1F65537-F2C5-44DE-8CE9-AA575C9DFEFB}|SMPiano.vcxproj|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1F65537-F2C5-44DE-8CE9-AA575C9DFEFB}|SMPiano.vcxproj|C:\\Users\\thech\\Documents\\GitHub\\snes-daw-cpp\\main.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E1F65537-F2C5-44DE-8CE9-AA575C9DFEFB}|SMPiano.vcxproj|solutionrelative:main.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1F65537-F2C5-44DE-8CE9-AA575C9DFEFB}|SMPiano.vcxproj|C:\\Users\\thech\\Documents\\GitHub\\snes-daw-cpp\\SNES.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E1F65537-F2C5-44DE-8CE9-AA575C9DFEFB}|SMPiano.vcxproj|solutionrelative:SNES.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1F65537-F2C5-44DE-8CE9-AA575C9DFEFB}|SMPiano.vcxproj|C:\\Users\\thech\\Documents\\GitHub\\snes-daw-cpp\\SNES.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E1F65537-F2C5-44DE-8CE9-AA575C9DFEFB}|SMPiano.vcxproj|solutionrelative:SNES.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,8 +26,47 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SNES.h",
+              "DocumentMoniker": "C:\\Users\\thech\\Documents\\GitHub\\snes-daw-cpp\\SNES.h",
+              "RelativeDocumentMoniker": "SNES.h",
+              "ToolTip": "C:\\Users\\thech\\Documents\\GitHub\\snes-daw-cpp\\SNES.h",
+              "RelativeToolTip": "SNES.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-01-31T16:01:06.24Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SNES.cpp",
+              "DocumentMoniker": "C:\\Users\\thech\\Documents\\GitHub\\snes-daw-cpp\\SNES.cpp",
+              "RelativeDocumentMoniker": "SNES.cpp",
+              "ToolTip": "C:\\Users\\thech\\Documents\\GitHub\\snes-daw-cpp\\SNES.cpp",
+              "RelativeToolTip": "SNES.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-01-31T17:45:03.218Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "main.h",
+              "DocumentMoniker": "C:\\Users\\thech\\Documents\\GitHub\\snes-daw-cpp\\main.h",
+              "RelativeDocumentMoniker": "main.h",
+              "ToolTip": "C:\\Users\\thech\\Documents\\GitHub\\snes-daw-cpp\\main.h",
+              "RelativeToolTip": "main.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-01-31T16:05:47.846Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -24,9 +75,9 @@
               "RelativeDocumentMoniker": "main.cpp",
               "ToolTip": "C:\\Users\\thech\\Documents\\GitHub\\snes-daw-cpp\\main.cpp",
               "RelativeToolTip": "main.cpp",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAACgAAAAtAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-01-11T18:44:12.694Z",
+              "WhenOpened": "2026-01-12T16:32:12.56Z",
               "EditorCaption": ""
             }
           ]

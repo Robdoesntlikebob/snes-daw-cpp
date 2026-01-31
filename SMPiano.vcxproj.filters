@@ -48,6 +48,9 @@
     <ClCompile Include="sndEMU\SPC_Filter.cpp">
       <Filter>Source Files\sndEMU</Filter>
     </ClCompile>
+    <ClCompile Include="SNES.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="sndEMU\blargg_common.h">
@@ -564,6 +567,9 @@
       <Filter>Source Files\lua</Filter>
     </ClInclude>
     <ClInclude Include="main.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SNES.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
